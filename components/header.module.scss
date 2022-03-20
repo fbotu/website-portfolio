@@ -6,16 +6,20 @@
     cursor: pointer;
     margin: 0;
     padding: 0;
-    width: 65vw;
-    max-width: 350px;
+    // width: 65vw;
+    // max-width: 350px;
 
-    @include min($min:$-sm) {
-        width: 65vw;
-        max-width: 400px;
-    }
+    // @include min($min:$-sm) {
+    //     width: 65vw;
+    //     max-width: 400px;
+    // }
 
     @include min($min:$-xl) {
         margin-left: 0.5rem;
+    }
+
+    & h1 {
+        color: $Primary;
     }
 }
 
@@ -23,10 +27,10 @@
     overflow: hidden;
     height: 175px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center; 
     padding: 1.5rem; 
-    background-color: $Primary;
+    background-color: $BG-Yellow;
 
     a { 
         font-size: 1.2rem;

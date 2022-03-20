@@ -1,0 +1,68 @@
+/* BREAKPOINTS */
+$-xs:  450px;
+$-sm:  768px;
+$-md:  1024px;
+$-lg:  1200px;
+$-xl:  1600px;
+
+/* MEDIA QUERIES */
+
+//Medium Screen - below 575 screen size, initialy 450px
+@mixin xs-screen{
+    @media only screen and (max-width: $-xs) {
+        @content;
+    }
+}
+
+//Medium Screen - 575 to 767 screen size
+@mixin sm-screen{
+    @media only screen and (min-width: ($-xs + 1)) and (max-width: $-sm) {
+        @content;
+    }
+}
+
+//Medium Screen - 768 to 992 screen size
+@mixin md-screen{
+    @media only screen and (min-width: ($-sm + 1)) and (max-width: $-md) {
+        @content;
+    }
+}
+
+//Large Screen - 993 to 1170 screen size
+@mixin lg-screen{
+    @media only screen and (min-width: ($-md + 1)) and (max-width: $-lg) {
+        @content;
+    }
+}
+
+//Large Screen - >= 1201 screen size
+@mixin xl-screen{
+    @media only screen and (min-width: ($-lg + 1)) and (min-width: $-xl) {
+        @content;
+    }
+}
+
+html, body {
+    
+    @include xs-screen {
+        font-size: 16px;
+    }
+    @include sm-screen {
+        font-size: 16px;
+    }
+    @include md-screen {
+        font-size: 17px;
+    }
+    @include lg-screen {
+        font-size: 18px;
+    }
+    @include xl-screen {
+        font-size: 20px;
+    }
+  }
+
+
+
+
+
+

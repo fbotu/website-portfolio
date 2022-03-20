@@ -26,16 +26,18 @@ function Header() {
           >            
             <div className={styles.logoWrapper}
                   onClick={handleClick}>
-                <Image
+                {/* <Image
                   src={Logo}
                   alt="Logo"
                   layout="responsive"
                   width={2559/10}
                   height={853/10}
-                  />
+                  /> */}
+                  <h1>Francis Botu Web Development</h1>
+
             </div>
           </Link>
-        <div onClick={handleClick} className={styles.mobileMenuIcon}>
+        {/* <div onClick={handleClick} className={styles.mobileMenuIcon}>
             <i>
               {clicked ? <FaTimes /> : <FaBars />}
             </i>
@@ -66,7 +68,7 @@ function Header() {
                 );
             })}
         </ul> 
-        }
+        } */}
       </div>
     );
 }

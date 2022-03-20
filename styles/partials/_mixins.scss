@@ -1,0 +1,33 @@
+@mixin bgImage {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7),
+          ),
+          url(../../public/bgimage.webp);
+        //   filter: contrast(125%);
+    background-position: right bottom, left top;
+    background-size: cover;
+}
+
+@mixin Page-Title {
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+
+    padding: 0 5rem;
+    margin: 1rem 0 4.5rem 0;
+    line-height: 5rem;
+    letter-spacing: 0.5rem;
+    font-weight: normal;
+    font-stretch: expanded;
+    border-bottom: 3px solid white;
+    border-top: 3px solid white;
+
+    text-align: center;
+}
+
+@mixin Content-MW {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    padding: 0;   
+}

@@ -1,27 +1,46 @@
 // * COMPONENTS
-import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import InstagramPost from '../components/InstagramPost';
 import Link from 'next/link';
-import groq from 'groq';
-import client from '../lib/sanity';
-import imageUrlBuilder from '@sanity/image-url';
 import Socials from '../components/Socials'
 // * STYLES
 import styles from './index.module.scss'
 // * CONTENT
-import Hero from '../public/hero.webp'
 
-// * ImageURLBuilder
-const builder = imageUrlBuilder(client)
+  // *FB Music
+  import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
+  import fbm2 from '../public/websites/fb-music/image-6fb-music.webp'
+  import fbm3 from '../public/websites/fb-music/image-7fb-music.webp'
+  import fbm4 from '../public/websites/fb-music/image-10fb-music.webp'
 
-function urlFor(source) {
-  return builder.image(source)
-}
+  // * Anushka Tay
+  import at1 from '../public/websites/anushka-tay/image-1anushka-tay.webp'
+  import at2 from '../public/websites/anushka-tay/image-2anushka-tay.webp'
+  import at3 from '../public/websites/anushka-tay/image-3anushka-tay.webp'
+
+    // * Health Care Cafe
+    import hcc1 from '../public/websites/hcc/image-1hcc.webp'
+    import hcc2 from '../public/websites/hcc/image-2hcc.webp'
+    import hcc3 from '../public/websites/hcc/image-3hcc.webp'
+    import hcc4 from '../public/websites/hcc/image-4hcc.webp'
+    import hcc5 from '../public/websites/hcc/image-5hcc.webp'
+
+    // * The Crimson Stitchery
+    import tcs1 from '../public/websites/tcs/image-1tcs.webp'
+    import tcs2 from '../public/websites/tcs/image-2tcs.webp'
+    import tcs3 from '../public/websites/tcs/image-3tcs.webp'
+    import tcs4 from '../public/websites/tcs/image-4tcs.webp'
+    import tcs5 from '../public/websites/tcs/image-5tcs.webp'
+    import tcs6 from '../public/websites/tcs/image-6tcs.webp'
+    import tcs7 from '../public/websites/tcs/image-7tcs.webp'
+    import tcs8 from '../public/websites/tcs/image-9tcs.webp'
+    import tcs9 from '../public/websites/tcs/image-10tcs.webp'
+    import tcs10 from '../public/websites/tcs/image-11tcs.webp'
+
+
 
 // * MAIN CODE BLOCK
-const Home = ({ work }) => {
+const Home = () => {
 
   return (
     <div className={styles.container}>
@@ -34,128 +53,285 @@ const Home = ({ work }) => {
         <link
           rel='canonical'
           href='https://francisbotu.com'
-
         />
       </Head>
-
-      {/* <Header /> */}
-      <div
-        className={[styles.section, styles.hero].join(" ")}>
-        <h1>Home</h1>
-        <div className={styles.heroImageWrapper}>
-          <Image
-            src={Hero}
-            alt="hero image"
-            layout="responsive"
-            width={960 / 2}
-            height={640 / 2}
-          />
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h3 className={styles.sectionHeader}>
+            FB Music
+          </h3>
+          <div className={styles.webSiteURL}>
+            <Link
+              href="francisbotu.com"
+            >
+              francisbotu.com
+            </Link>
+          </div>
+        </div>
+        
+        <div className={styles.sectionBody}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={fbm1}
+              alt="FB Music 1"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={fbm2}
+              alt="FB Music 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={fbm3}
+              alt="FB Music 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={fbm4}
+              alt="FB Music 4"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
         </div>
       </div>
 
-      <div className={[styles.section, styles.shows].join(" ")}>
-        <h1>
-          Shows
-        </h1>
-        <ul className={styles.workList}>
-          {work.length > 0 && work.map(
-            ({ _id, title = '', slug = '', year = '', mainImage = '' }) =>
-              slug && (
-                <li key={_id} className={styles.work}>
-                  {mainImage && (
-                    <div>
-                      <a href={`/work/${slug.current}`}>
-                        <img
-                          className={styles.mainImage}
-                          src={urlFor(mainImage)
-                            .size(400, 300)
-                            .dpr(2)
-                            .url()}
-                          alt={`${title} show image`}
-                        />
-                      </a>
-                    </div>
-                  )}
-                  <Link href="/work/[slug]" as={`/work/${slug.current}`}>
-                    <a>{title}</a>
-                  </Link>{' '}
-                  ({new Date(year).getFullYear()})
-                  <br />
-                  {/* <h3 className={styles.showRole}>{role}</h3> */}
-                </li>
-              )
-          )}
-        </ul>
-      </div>
-
-      <div className={[styles.section, styles.music].join(" ")}>
-        {/* SoundCloud */}
-        <h1>
-          Music
-        </h1>
-
-        <div className={styles.soundCloudWrapper}>
-          <iframe
-            title="Soundcloud Player"
-            width="100%"
-            height="450"
-            scrolling="no"
-            frameBorder="no"
-            allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1197135694&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true">
-          </iframe>
+      {/* Anushka Tay .co.uk */}
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h3 className={styles.sectionHeader}>
+            Anushka Tay
+          </h3>
+          <div className={styles.webSiteURL}>
+            <Link
+              href="anushkatay.co.uk"
+            >
+              anushkatay.co.uk
+            </Link>
+          </div>
         </div>
-        <div className={styles.soundCloud}>
-          <a className={styles.link} href="https://soundcloud.com/pheori" title="Pheori" target="_blank" rel="noreferrer">Pheori</a>
-          ·
-          <a className={styles.link} href="https://soundcloud.com/pheori/sets/highlights" title="Highlights" target="_blank" rel="noreferrer">Highlights</a>
+        
+        <div className={styles.sectionBody}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={at1}
+              alt="Anushka Tay 1"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={at2}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={at3}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
         </div>
-
       </div>
 
-      <div className={[styles.section, styles.instagram].join(" ")}>
-        <h1>
-          Instagram
-        </h1>
-        <div className={styles.instagramPostsWrapper}>
 
-          <InstagramPost
-            instagramURL="https://www.instagram.com/p/CKjHAkSsOyI/"
-          />
-          <InstagramPost
-            instagramURL="https://www.instagram.com/p/CKC7QxOnX3g/"
-          />
-          <InstagramPost
-            instagramURL="https://www.instagram.com/p/CJ09BocJgfd/"
-          />
-
+      {/* Health Care Cafe .org.uk */}
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h3 className={styles.sectionHeader}>
+            Health Care Cafe
+          </h3>
+          <div className={styles.webSiteURL}>
+            <Link
+              href="healthcarecafe.org.uk"
+            >
+              healthcarecafe.org.uk
+            </Link>
+          </div>
         </div>
-
+        
+        <div className={styles.sectionBody}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={hcc1}
+              alt="Anushka Tay 1"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={hcc2}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={hcc3}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={hcc4}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={hcc5}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className={[styles.section, styles.contact, styles.homeSocials].join(" ")}>
-        <h1>
-          Socials
-        </h1>
+      {/* Health Care Cafe .org.uk */}
+      <div className={styles.section}>
+        <div className={styles.sectionHeader}>
+          <h3 className={styles.sectionHeader}>
+            Health Care Cafe
+          </h3>
+          <div className={styles.webSiteURL}>
+            <Link
+              href="healthcarecafe.org.uk"
+            >
+              healthcarecafe.org.uk
+            </Link>
+          </div>
+        </div>
+        
+        <div className={styles.sectionBody}>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tcs1}
+              alt="Anushka Tay 1"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tcs2}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={tcs3}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tcs4}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={tcs5}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tcs6}
+              alt="Anushka Tay 1"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tcs7}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={tcs8}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+          <div className={styles.imageWrapper}>
+            <Image
+              src={tcs9}
+              alt="Anushka Tay 2"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+            <div className={styles.imageWrapper}>
+            <Image
+              src={tcs10}
+              alt="Anushka Tay 3"
+              layout="responsive"
+              // width={700}
+              // height={475}
+            />
+          </div>
+        </div>
+      </div>    
 
-        <Socials />
-
-      </div>
+        {/* END */}      
     </div>
-  );
-}
-
-export async function getStaticProps() {
-  // *GROQ QUERIES FROM SANITYIO
-  const work = await client.fetch(groq`
-  *[_type == "work" && year < now()] | order(year desc)[0..3]
-  `)
-  // * PROPS RETURNED FROM SANITYIO GROQ QUERIES
-  return {
-    props: {
-      work,
-    }
-  }
+  )
 }
 
 export default Home;

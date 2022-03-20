@@ -19,13 +19,14 @@ export default function Footer() {
         passHref
       >            
         <div className={styles.logoWrapper}>
-            <Image
+            {/* <Image
               src={Logo}
               alt="Logo"
               layout="responsive"
               // width={2559/8}
               // height={853/8}
-              />
+            /> */}
+            <h3>Francis Botu</h3>
         </div>
       </Link>
     </footer>

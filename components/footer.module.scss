@@ -9,12 +9,12 @@
     align-items: center;
     padding: 0 0;
     font-size: medium;
-    background-color: #800020;
-
 
     @include max($max:1200px) {
         padding: 0 1rem;
-      } 
+    } 
+
+    
 }
 
 .madeBy {
@@ -31,5 +31,9 @@
     padding: 0;
     width: 50vw;
     max-width: 320px;
+
+    & h3 {
+        color: $Secondary;
+    }
 }
 
