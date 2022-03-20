@@ -62,7 +62,7 @@ const Home = () => {
           </h3>
           <div className={styles.webSiteURL}>
             <Link
-              href="francisbotu.com"
+              href="https://francisbotu.com"
             >
               francisbotu.com
             </Link>
@@ -117,7 +117,7 @@ const Home = () => {
           </h3>
           <div className={styles.webSiteURL}>
             <Link
-              href="anushkatay.co.uk"
+              href="https://anushkatay.co.uk"
             >
               anushkatay.co.uk
             </Link>
@@ -164,7 +164,7 @@ const Home = () => {
           </h3>
           <div className={styles.webSiteURL}>
             <Link
-              href="healthcarecafe.org.uk"
+              href="https://healthcarecafe.org.uk"
             >
               healthcarecafe.org.uk
             </Link>
@@ -175,7 +175,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={hcc1}
-              alt="Anushka Tay 1"
+              alt="Health Care Cafe 1"
               layout="responsive"
               // width={700}
               // height={475}
@@ -184,7 +184,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={hcc2}
-              alt="Anushka Tay 2"
+              alt="Health Care Cafe 2"
               layout="responsive"
               // width={700}
               // height={475}
@@ -193,7 +193,7 @@ const Home = () => {
             <div className={styles.imageWrapper}>
             <Image
               src={hcc3}
-              alt="Anushka Tay 3"
+              alt="Health Care Cafe 3"
               layout="responsive"
               // width={700}
               // height={475}
@@ -202,7 +202,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={hcc4}
-              alt="Anushka Tay 2"
+              alt="Health Care Cafe 4"
               layout="responsive"
               // width={700}
               // height={475}
@@ -211,7 +211,7 @@ const Home = () => {
             <div className={styles.imageWrapper}>
             <Image
               src={hcc5}
-              alt="Anushka Tay 3"
+              alt="Health Care Cafe 5"
               layout="responsive"
               // width={700}
               // height={475}
@@ -220,7 +220,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Health Care Cafe .org.uk */}
+      {/* The Crimson Stitchery .com */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <h3 className={styles.sectionHeader}>
@@ -228,9 +228,9 @@ const Home = () => {
           </h3>
           <div className={styles.webSiteURL}>
             <Link
-              href="healthcarecafe.org.uk"
+              href="https://thecrimsonstitchery.com"
             >
-              healthcarecafe.org.uk
+              thecrimsonstitchery.com
             </Link>
           </div>
         </div>
@@ -239,7 +239,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={tcs1}
-              alt="Anushka Tay 1"
+              alt="The Crimson Stitchery 1"
               layout="responsive"
               // width={700}
               // height={475}
@@ -248,7 +248,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={tcs2}
-              alt="Anushka Tay 2"
+              alt="The Crimson Stitchery 2"
               layout="responsive"
               // width={700}
               // height={475}
@@ -257,7 +257,7 @@ const Home = () => {
             <div className={styles.imageWrapper}>
             <Image
               src={tcs3}
-              alt="Anushka Tay 3"
+              alt="The Crimson Stitchery 3"
               layout="responsive"
               // width={700}
               // height={475}
@@ -266,7 +266,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={tcs4}
-              alt="Anushka Tay 2"
+              alt="The Crimson Stitchery 4"
               layout="responsive"
               // width={700}
               // height={475}
@@ -275,7 +275,7 @@ const Home = () => {
             <div className={styles.imageWrapper}>
             <Image
               src={tcs5}
-              alt="Anushka Tay 3"
+              alt="The Crimson Stitchery 5"
               layout="responsive"
               // width={700}
               // height={475}
@@ -284,7 +284,7 @@ const Home = () => {
           {/* <div className={styles.imageWrapper}>
             <Image
               src={tcs6}
-              alt="Anushka Tay 1"
+              alt="The Crimson Stitchery 6"
               layout="responsive"
               // width={700}
               // height={475}
@@ -293,7 +293,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={tcs7}
-              alt="Anushka Tay 2"
+              alt="The Crimson Stitchery 7"
               layout="responsive"
               // width={700}
               // height={475}
@@ -302,7 +302,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={tcs8}
-              alt="Anushka Tay 3"
+              alt="The Crimson Stitchery 8"
               layout="responsive"
               // width={700}
               // height={475}
@@ -311,7 +311,7 @@ const Home = () => {
           <div className={styles.imageWrapper}>
             <Image
               src={tcs9}
-              alt="Anushka Tay 2"
+              alt="The Crimson Stitchery 9"
               layout="responsive"
               // width={700}
               // height={475}
@@ -320,7 +320,7 @@ const Home = () => {
           {/* <div className={styles.imageWrapper}>
             <Image
               src={tcs10}
-              alt="Anushka Tay 3"
+              alt="The Crimson Stitchery 10"
               layout="responsive"
               // width={700}
               // height={475}
