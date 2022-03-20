@@ -10,15 +10,15 @@ export default function Footer() {
   return (        
     <footer className={styles.footerWrapper}>
       <h2 className={styles.madeBy}>
-      made by
+      made by Francis Botu
       </h2>
-      <Link
+      {/* <Link
         href="/"
         target="_blank"
         rel="noopener noreferrer"
         passHref
-      >            
-        <div className={styles.logoWrapper}>
+      >             */}
+        {/* <div className={styles.logoWrapper}> */}
             {/* <Image
               src={Logo}
               alt="Logo"
@@ -26,9 +26,9 @@ export default function Footer() {
               // width={2559/8}
               // height={853/8}
             /> */}
-            <h3>Francis Botu</h3>
-        </div>
-      </Link>
+            {/* <h3>Francis Botu</h3> */}
+        {/* </div> */}
+      {/* </Link> */}
     </footer>
   );
 }
