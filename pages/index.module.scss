@@ -1,13 +1,13 @@
-@import '../styles/partials/breakpoints';
-@import '../styles/partials/mixins';
-@import '../styles/partials/brand';
+@import "../styles/partials/breakpoints";
+@import "../styles/partials/mixins";
+@import "../styles/partials/brand";
 
 /* BREAKPOINTS */
-$-xs:  450px;
-$-sm:  768px;
-$-md:  1024px;
-$-lg:  1200px;
-$-xl:  1201px;
+$-xs: 450px;
+$-sm: 768px;
+$-md: 1024px;
+$-lg: 1200px;
+$-xl: 1201px;
 
 .container {
   padding: 0 0rem;
@@ -54,7 +54,7 @@ div.sectionHeader {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
 }
 h3.sectionHeader {
   color: $Secondary;
@@ -63,10 +63,11 @@ h3.sectionHeader {
 
 .webSiteURL {
   font-size: 1.2rem;
-  
+
   color: $Secondary;
   margin-top: 1rem;
   padding: 1rem 2rem;
+
   background-color: $BG-Yellow;
   color: $Primary;
   border-radius: 50px;
@@ -78,7 +79,7 @@ h3.sectionHeader {
 
     transition: 0.2s ease-in-out;
   }
-  }
+}
 
 .sectionBody {
   padding: 0;
@@ -92,7 +93,9 @@ h3.sectionHeader {
 
   padding: 3rem 0;
 
-
+  @include max($max:$-sm){
+    padding: 2rem 0;
+  }
 }
 
 .section .imageWrapper {
@@ -110,4 +113,10 @@ h3.sectionHeader {
     filter: brightness(1.1);
     transition: 0.3s ease-in-out;
   }
+
+  @include max($max:$-sm){
+    padding: 0.5rem;
+    margin: 1rem 0;
+  }
+  
 }
