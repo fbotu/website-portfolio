@@ -14,9 +14,9 @@
     //     max-width: 400px;
     // }
 
-    @include min($min:$-xl) {
-        margin-left: 0.5rem;
-    }
+    // @include min($min:$-xl) {
+    //     margin-left: 0.5rem;
+    // }
 
     & h1 {
         color: $Primary;

@@ -281,7 +281,7 @@ const Home = () => {
               // height={475}
             />
           </div>
-          <div className={styles.imageWrapper}>
+          {/* <div className={styles.imageWrapper}>
             <Image
               src={tcs6}
               alt="Anushka Tay 1"
@@ -289,7 +289,7 @@ const Home = () => {
               // width={700}
               // height={475}
             />
-          </div>
+          </div> */}
           <div className={styles.imageWrapper}>
             <Image
               src={tcs7}
@@ -299,7 +299,7 @@ const Home = () => {
               // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={tcs8}
               alt="Anushka Tay 3"
@@ -317,7 +317,7 @@ const Home = () => {
               // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          {/* <div className={styles.imageWrapper}>
             <Image
               src={tcs10}
               alt="Anushka Tay 3"
@@ -325,7 +325,7 @@ const Home = () => {
               // width={700}
               // height={475}
             />
-          </div>
+          </div> */}
         </div>
       </div>    
 

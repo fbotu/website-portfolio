@@ -35,7 +35,6 @@ div.section {
   // min-height: 30vh;
 
   margin: 0;
-  padding: 3rem 0;
 
   background-color: $BG-Yellow;
 
@@ -46,20 +45,41 @@ div.section {
 
 div.sectionHeader {
   width: 100%;
-  margin-bottom: 3rem;
+  // margin-bottom: 3rem;
   padding: 3rem 0;
   text-align: center;
 
   background-color: $Primary;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
 }
 h3.sectionHeader {
   color: $Secondary;
   padding-bottom: 0.5rem;
 }
+
 .webSiteURL {
+  font-size: 1.2rem;
+  
   color: $Secondary;
-  padding-bottom: 1rem;
-}
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: $BG-Yellow;
+  color: $Primary;
+  border-radius: 50px;
+
+  transition: 0.2s ease-in-out;
+  &:hover {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    transition: 0.2s ease-in-out;
+  }
+  }
+
 .sectionBody {
   padding: 0;
   margin: 0;
@@ -69,6 +89,9 @@ h3.sectionHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 3rem 0;
+
 
 }
 
