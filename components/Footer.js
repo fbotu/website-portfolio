@@ -10,7 +10,7 @@ export default function Footer() {
   return (        
     <footer className={styles.footerWrapper}>
       <h2 className={styles.madeBy}>
-      made by Francis Botu
+      made by frAncis botu
       </h2>
       {/* <Link
         href="/"

@@ -2,7 +2,7 @@
 @import '../styles/partials/brand';
 
 .footerWrapper {
-    background-color: $Primary;
+    background-color: $Secondary;
     height: 175px;
     display: flex;
     justify-content: center;
@@ -18,10 +18,8 @@
 }
 
 .madeBy {
-    color: #fff;
+    color: $PrimaryLight;
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: normal;
 }
 
 .logoWrapper {
@@ -30,9 +28,5 @@
     padding: 0;
     width: 50vw;
     max-width: 320px;
-
-    & h3 {
-        color: $Secondary;
-    }
 }
 

@@ -9,18 +9,31 @@ $-md: 1024px;
 $-lg: 1200px;
 $-xl: 1201px;
 
+// * ANIMATIONS
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes left-fade-in {
+  from {
+    margin-left: -100%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+
+// *STYLES
 .container {
   padding: 0 0rem;
   margin: 0;
-  padding: 0;
-  font-family: $Body;
   width: 100%;
   height: auto;
   min-height: 62vh;
-
-  & h3 h4 h5 h6 {
-    font-family: $Body;
-  }
 }
 
 .main {
@@ -67,55 +80,70 @@ h3.sectionHeader {
   text-transform: lowercase;
 }
 
-.webSiteURL {
-  font-size: 1.2rem;
-
-  margin-top: 1rem;
-  padding: 1rem 1.5rem;
+button.webSiteURL {
+  margin: 2rem 0rem 2rem 0rem;
+  padding: rem 1.5rem;
 
   background-color: $SecondaryLight;
   color: $PrimaryLight;
   border: 2px solid $Primary;
-  // border-radius: 50px;
+  border-radius: 0px;
+  box-shadow: 2px 5px 20px 0px $Box-Shadow;
 
-  & a {
-    color: $PrimaryLight
-  }
+  // & a {
+  //   color: $PrimaryLight;
+  // }
 
   transition: 0.2s ease-in-out;
   &:hover {
     padding-left: 1rem;
     padding-right: 1rem;
 
+    // & a {
+    //   color: $Primary;
+    // }
+
     transition: 0.2s ease-in-out;
   }
 }
 
-.sectionBody {
-  padding: 0;
+.webSiteType {
+  margin-bottom: 0.5rem;
+  
+  &::before {
+    content: ' - ';
+  }
+  &::after {
+    content: ' - ';
+  }
+}
+
+div.sectionBody {
+  animation-name: fade-in;
+  animation-duration: 2s;
+
+  padding: 2rem 2rem 2rem 2rem;
   margin: 0;
   width: 100%;
+  max-width: 1600px;
   height: auto;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 
-  padding: 3rem 0;
-
-  @include max($max:$-sm){
-    padding: 2rem 0;
+  @include min($min: $-sm) {
+    gap: 5rem;
+    padding: 5rem;
   }
 }
 
 .section .imageWrapper {
   display: block;
-  width: 80%;
+  width: 100%;
   height: auto;
-  padding: 1rem;
-  margin: 3rem;
 
-  border-radius: 10px;
   box-shadow: 4px 4px 20px $Box-Shadow;
 
   transition: 0.3s ease-in-out;
@@ -124,9 +152,7 @@ h3.sectionHeader {
     transition: 0.3s ease-in-out;
   }
 
-  @include max($max:$-sm){
-    padding: 0.5rem;
-    margin: 1rem 0;
-  }
-  
+  // @include min($min: $-sm) {
+  //   padding: 1rem;
+  // }
 }

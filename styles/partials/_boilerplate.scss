@@ -1,3 +1,5 @@
+@import './brand';
+
 html,
 body {
   padding: 0;
@@ -23,12 +25,15 @@ button {
   cursor: pointer;
   border: none;
   border-radius: 10px;
-  font-size: 1rem;
+
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+
   padding: 1rem;
 }
 
 img {
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 li {
@@ -36,47 +41,60 @@ li {
 }
 
 h1 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2.5rem;
+  font-family: $Header;
+  font-size: 2.25rem;
   font-weight: bold;
-  /* color: var(--primary); */
+  color: $Primary;
   padding: 0rem 0 0rem 0;
+  line-height: 3rem;
 }
 
 h2 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2rem;
-  color: var(--primary);
+  font-family: $Header;
+  font-size: 1.7rem;
+  // ! 1.688rem
+  color: $PrimaryLight;
 }
 
 h3 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.875rem;
-  color: var(--primary);
+  font-family: $Header;
+  font-size: 1.3rem;
+    // ! 1.312rem
+  color: $PrimaryLight;
+  letter-spacing: 0.2rem;
 }
 
 h4 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.5rem;
-  color: var(--primary);
-}
-
-h5 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.25rem;
-  color: var(--primary);
-}
-
-h6 {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1.125rem;
-  color: var(--primary);
+  font-family: $Body;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: 5%;
+  font-size: 1rem;
+  color: $PrimaryLight;
 }
 
 p {
-  font-family: 'Roboto';
+  font-family: $Body;
   font-size: 1rem;
   letter-spacing: 0.1rem;
-  color: var(--text);
+  color: $PrimaryLight;
 }
+
+h5 {
+  font-family: $Body;
+  font-size: 0.8rem;    
+  // ! 0.75rem
+  letter-spacing: 0.1rem;
+  color: $PrimaryLight;
+}
+
+// h6 {
+//    font-family: $Body;
+//   font-size: 0.8rem;    
+//   // ! 0.75rem
+//   letter-spacing: 0.1rem;
+//   color: $PrimaryLight;
+// }
+
+
 

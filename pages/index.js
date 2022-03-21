@@ -2,7 +2,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import Socials from '../components/Socials'
+// import Socials from '../components/Socials'
 // * STYLES
 import styles from './index.module.scss'
 // * CONTENT
@@ -43,9 +43,9 @@ import styles from './index.module.scss'
 const Home = () => {
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Head>
-        <title>Francis Botu - Composer, Guitarist, Producer</title>
+        <title>Francis Botu - Web Development</title>
         <meta
           name="description"
           content="Francis Botu has worked across music, theatre and performance art and enjoys collaborating on interdisciplinary projects."
@@ -62,13 +62,19 @@ const Home = () => {
           <h3 className={styles.sectionHeader}>
             FB Music
           </h3>
-          <div className={styles.webSiteURL}>
+          <button className={styles.webSiteURL}>
             <Link
               href="https://francisbotu.com"
             >
               francisbotu.com
             </Link>
-          </div>
+          </button>
+          <h4 className={styles.webSiteType}>
+            Portfolio / Personal
+          </h4>
+          <p>
+            Portfolio website for a London based musician
+          </p>
         </div>
         
         <div className={styles.sectionBody}>
@@ -117,13 +123,19 @@ const Home = () => {
           <h3 className={styles.sectionHeader}>
             Anushka Tay
           </h3>
-          <div className={styles.webSiteURL}>
+          <button className={styles.webSiteURL}>            
             <Link
               href="https://anushkatay.co.uk"
             >
               anushkatay.co.uk
             </Link>
-          </div>
+          </button>
+          <h4 className={styles.webSiteType}>
+            Personal
+          </h4>
+          <p>
+            Personal website for a London based academic
+          </p>
         </div>
         
         <div className={styles.sectionBody}>
@@ -157,20 +169,25 @@ const Home = () => {
         </div>
       </div>
 
-
       {/* Health Care Cafe .org.uk */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <h3 className={styles.sectionHeader}>
             Health Care Cafe
           </h3>
-          <div className={styles.webSiteURL}>
+          <button className={styles.webSiteURL}>
             <Link
               href="https://healthcarecafe.org.uk"
             >
               healthcarecafe.org.uk
             </Link>
-          </div>
+          </button>
+          <h4 className={styles.webSiteType}>
+            Small Business / Blog
+          </h4>
+          <p>
+            Blog website for a small business in the healthcare sector
+          </p>
         </div>
         
         <div className={styles.sectionBody}>
@@ -226,15 +243,21 @@ const Home = () => {
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <h3 className={styles.sectionHeader}>
-            Health Care Cafe
+          The Crimson Stitchery
           </h3>
-          <div className={styles.webSiteURL}>
+          <button className={styles.webSiteURL}>
             <Link
               href="https://thecrimsonstitchery.com"
             >
               thecrimsonstitchery.com
             </Link>
-          </div>
+          </button>
+          <h4 className={styles.webSiteType}>
+            Blog / Portfolio / Small Business
+          </h4>
+          <p>
+            A website for a knitting YouTube channel and content creator
+          </p>
         </div>
         
         <div className={styles.sectionBody}>
@@ -332,7 +355,7 @@ const Home = () => {
       </div>    
 
         {/* END */}      
-    </div>
+    </main>
   )
 }
 

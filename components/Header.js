@@ -33,7 +33,8 @@ function Header() {
                   width={2559/10}
                   height={853/10}
                   /> */}
-                  <h1>frAncis botu Web deVelopMent</h1>
+                  <h1>frAncis botu</h1>
+                  <h1>Web deVelopMent</h1>
 
             </div>
           </Link>
