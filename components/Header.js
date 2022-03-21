@@ -33,7 +33,7 @@ function Header() {
                   width={2559/10}
                   height={853/10}
                   /> */}
-                  <h1>Francis Botu Web Development</h1>
+                  <h1>frAncis botu Web deVelopMent</h1>
 
             </div>
           </Link>

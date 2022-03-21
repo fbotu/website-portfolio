@@ -55,6 +55,8 @@ const Home = () => {
           href='https://francisbotu.com'
         />
       </Head>
+
+      {/* FB Music */}
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <h3 className={styles.sectionHeader}>

@@ -13,10 +13,14 @@ $-xl: 1201px;
   padding: 0 0rem;
   margin: 0;
   padding: 0;
-  font-family: monospace;
+  font-family: $Body;
   width: 100%;
   height: auto;
   min-height: 62vh;
+
+  & h3 h4 h5 h6 {
+    font-family: $Body;
+  }
 }
 
 .main {
@@ -36,7 +40,7 @@ div.section {
 
   margin: 0;
 
-  background-color: $BG-Yellow;
+  background-color: $SecondaryLight;
 
   display: flex;
   flex-direction: column;
@@ -49,7 +53,7 @@ div.sectionHeader {
   padding: 3rem 0;
   text-align: center;
 
-  background-color: $Primary;
+  background-color: $Secondary;
 
   display: flex;
   flex-direction: column;
@@ -57,25 +61,31 @@ div.sectionHeader {
   align-items: center;
 }
 h3.sectionHeader {
-  color: $Secondary;
+  color: $PrimaryLight;
   padding-bottom: 0.5rem;
+  font-family: $Header;
+  text-transform: lowercase;
 }
 
 .webSiteURL {
   font-size: 1.2rem;
 
-  color: $Secondary;
   margin-top: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 
-  background-color: $BG-Yellow;
-  color: $Primary;
-  border-radius: 50px;
+  background-color: $SecondaryLight;
+  color: $PrimaryLight;
+  border: 2px solid $Primary;
+  // border-radius: 50px;
+
+  & a {
+    color: $PrimaryLight
+  }
 
   transition: 0.2s ease-in-out;
   &:hover {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     transition: 0.2s ease-in-out;
   }
