@@ -255,7 +255,7 @@ const Home = () => {
           <h4 className={styles.webSiteType}>
             Blog / Portfolio / Small Business
           </h4>
-          <p>
+          <p className={styles.webSiteDescription}>
             A website for a knitting YouTube channel and content creator
           </p>
         </div>
