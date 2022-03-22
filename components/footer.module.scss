@@ -10,6 +10,9 @@
     padding: 0 0;
     font-size: medium;
 
+    border-top: 2px solid $Primary;
+    border-bottom: 2px solid $Primary;
+
     @include max($max:1200px) {
         padding: 0 1rem;
     } 
