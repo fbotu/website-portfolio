@@ -3,47 +3,159 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import Socials from '../components/Socials'
+import { useState, useEffect } from 'react'
 // * STYLES
 import styles from './index.module.scss'
 // * CONTENT
 // import { VscGithub } from 'react-icons/vsc';
 
 
-  // *FB Music
-  import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
-  import fbm2 from '../public/websites/fb-music/image-6fb-music.webp'
-  import fbm3 from '../public/websites/fb-music/image-7fb-music.webp'
-  import fbm4 from '../public/websites/fb-music/image-10fb-music.webp'
+// *FB Music
+import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
+import fbm2 from '../public/websites/fb-music/image-6fb-music.webp'
+import fbm3 from '../public/websites/fb-music/image-7fb-music.webp'
+import fbm4 from '../public/websites/fb-music/image-10fb-music.webp'
 
-  // * Anushka Tay
-  import at1 from '../public/websites/anushka-tay/image-1anushka-tay.webp'
-  import at2 from '../public/websites/anushka-tay/image-2anushka-tay.webp'
-  import at3 from '../public/websites/anushka-tay/image-3anushka-tay.webp'
+// * Anushka Tay
+import at1 from '../public/websites/anushka-tay/image-1anushka-tay.webp'
+import at2 from '../public/websites/anushka-tay/image-2anushka-tay.webp'
+import at3 from '../public/websites/anushka-tay/image-3anushka-tay.webp'
 
-    // * Health Care Cafe
-    import hcc1 from '../public/websites/hcc/image-1hcc.webp'
-    import hcc2 from '../public/websites/hcc/image-2hcc.webp'
-    import hcc3 from '../public/websites/hcc/image-3hcc.webp'
-    import hcc4 from '../public/websites/hcc/image-4hcc.webp'
-    import hcc5 from '../public/websites/hcc/image-5hcc.webp'
+// * Health Care Cafe
+import hcc1 from '../public/websites/hcc/image-1hcc.webp'
+import hcc2 from '../public/websites/hcc/image-2hcc.webp'
+import hcc3 from '../public/websites/hcc/image-3hcc.webp'
+import hcc4 from '../public/websites/hcc/image-4hcc.webp'
+import hcc5 from '../public/websites/hcc/image-5hcc.webp'
 
-    // * The Crimson Stitchery
-    import tcs1 from '../public/websites/tcs/image-1tcs.webp'
-    import tcs2 from '../public/websites/tcs/image-2tcs.webp'
-    import tcs3 from '../public/websites/tcs/image-3tcs.webp'
-    import tcs4 from '../public/websites/tcs/image-4tcs.webp'
-    import tcs5 from '../public/websites/tcs/image-5tcs.webp'
-    import tcs6 from '../public/websites/tcs/image-6tcs.webp'
-    import tcs7 from '../public/websites/tcs/image-7tcs.webp'
-    import tcs8 from '../public/websites/tcs/image-9tcs.webp'
-    import tcs9 from '../public/websites/tcs/image-10tcs.webp'
-    import tcs10 from '../public/websites/tcs/image-11tcs.webp'
+// * The Crimson Stitchery
+import tcs1 from '../public/websites/tcs/image-1tcs.webp'
+import tcs2 from '../public/websites/tcs/image-2tcs.webp'
+import tcs3 from '../public/websites/tcs/image-3tcs.webp'
+import tcs4 from '../public/websites/tcs/image-4tcs.webp'
+import tcs5 from '../public/websites/tcs/image-5tcs.webp'
+import tcs6 from '../public/websites/tcs/image-6tcs.webp'
+import tcs7 from '../public/websites/tcs/image-7tcs.webp'
+import tcs8 from '../public/websites/tcs/image-9tcs.webp'
+import tcs9 from '../public/websites/tcs/image-10tcs.webp'
+import tcs10 from '../public/websites/tcs/image-11tcs.webp'
 
 
+// window.addEventListener("scroll", reveal);
 
 // * MAIN CODE BLOCK
 const Home = () => {
 
+  const Listener = (action) => {
+  useEffect(() => {
+        window.addEventListener('scroll', action)
+
+    return () => removeEventListener('scroll', action)
+    }, []);
+  }
+    const IfSt = (condition, action) => {
+        condition ? action(true) : action(false);
+    }  
+
+
+  // * USE STATES
+  const [FBM, setFBM] = useState(true);
+  const [AT, setAT] = useState(false);
+  const [HCC, setHCC] = useState(false);
+  const [TCS, setTCS] = useState(false);
+
+  // * REVEAL FUNCTIONS
+  function revealFBM() {
+    let element = document.querySelector("#FBM");
+    // console.log(element)
+    
+    // for (let i = 0; i < element.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = element.getBoundingClientRect().top;
+      let elementVisible = 150;
+      let position = windowHeight - elementVisible;
+      // console.log(windowHeight);
+      console.log("element top " + elementTop);
+      // console.log(elementVisible);
+      console.log("position " + position)
+
+      // if (elementTop < windowHeight - elementVisible) {
+      //   element[i].classList.add("active");
+      // } else {
+      //   element[i].classList.remove("active");
+      // }
+    // }
+    function isActive() {
+    (elementTop < position) ? setFBM(true) : setFBM(false);
+    console.log(FBM);
+    }  
+    isActive()  
+  }
+  Listener(revealFBM);
+
+  function revealAT() {
+    let element = document.querySelector("#AT");
+    // console.log(element)
+    
+    let windowHeight = window.innerHeight;
+    let elementTop = element.getBoundingClientRect().top;
+    let elementVisible = 150;
+    let position = windowHeight - elementVisible;
+    // console.log(windowHeight);
+    console.log("element top " + elementTop);
+    // console.log(elementVisible);
+    console.log("position " + position)
+
+    function isActive() {
+    (elementTop < position) ? setAT(true) : setAT(false);
+    console.log(AT);
+    }  
+    isActive()    
+  }
+  Listener(revealAT);
+
+  function revealHCC() {
+    let element = document.querySelector("#HCC");
+    // console.log(element)
+    
+    let windowHeight = window.innerHeight;
+    let elementTop = element.getBoundingClientRect().top;
+    let elementVisible = 150;
+    let position = windowHeight - elementVisible;
+    // console.log(windowHeight);
+    console.log("element top " + elementTop);
+    // console.log(elementVisible);
+    console.log("position " + position)
+
+    function isActive() {
+    (elementTop < position) ? setHCC(true) : setHCC(false);
+    console.log(HCC);
+    }  
+    isActive()    
+  }
+  Listener(revealHCC);
+
+  function revealTCS() {
+    let element = document.querySelector("#TCS");
+    // console.log(element)
+    
+    let windowHeight = window.innerHeight;
+    let elementTop = element.getBoundingClientRect().top;
+    let elementVisible = 150;
+    let position = windowHeight - elementVisible;
+    // console.log(windowHeight);
+    console.log("element top " + elementTop);
+    // console.log(elementVisible);
+    console.log("position " + position)
+
+    function isActive() {
+    (elementTop < position) ? setTCS(true) : setTCS(false);
+    console.log(TCS);
+    }  
+    isActive()    
+  }
+  Listener(revealTCS);
+  
   return (
     <main className={styles.container}>
       <Head>
@@ -80,15 +192,21 @@ const Home = () => {
             </p>
           </div>
         </div>
-        
-        <div className={styles.sectionBody}>
+
+        <div 
+          id="FBM" 
+          className={`${FBM ? 
+            [styles.sectionBody, styles.active].join(" ") 
+            : styles.sectionBody
+          }`}
+        >
           <div className={styles.imageWrapper}>
             <Image
               src={fbm1}
               alt="FB Music 1"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -96,17 +214,17 @@ const Home = () => {
               src={fbm2}
               alt="FB Music 2"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={fbm3}
               alt="FB Music 3"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -114,8 +232,8 @@ const Home = () => {
               src={fbm4}
               alt="FB Music 4"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
         </div>
@@ -127,7 +245,7 @@ const Home = () => {
           <h3 className={styles.sectionHeader}>
             Anushka Tay
           </h3>
-          <button className={styles.webSiteURL}>            
+          <button className={styles.webSiteURL}>
             <Link
               href="https://anushkatay.co.uk"
             >
@@ -143,15 +261,21 @@ const Home = () => {
             </p>
           </div>
         </div>
-        
-        <div className={styles.sectionBody}>
+
+        <div 
+          id="AT" 
+          className={`${AT ? 
+            [styles.sectionBody, styles.active].join(" ") 
+            : styles.sectionBody
+          }`}
+        >          
           <div className={styles.imageWrapper}>
             <Image
               src={at1}
               alt="Anushka Tay 1"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -159,17 +283,17 @@ const Home = () => {
               src={at2}
               alt="Anushka Tay 2"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={at3}
               alt="Anushka Tay 3"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
         </div>
@@ -197,15 +321,21 @@ const Home = () => {
             </p>
           </div>
         </div>
-        
-        <div className={styles.sectionBody}>
+
+        <div 
+          id="HCC" 
+          className={`${HCC ? 
+            [styles.sectionBody, styles.active].join(" ") 
+            : styles.sectionBody
+          }`}
+        >
           <div className={styles.imageWrapper}>
             <Image
               src={hcc1}
               alt="Health Care Cafe 1"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -213,17 +343,17 @@ const Home = () => {
               src={hcc2}
               alt="Health Care Cafe 2"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={hcc3}
               alt="Health Care Cafe 3"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -231,17 +361,17 @@ const Home = () => {
               src={hcc4}
               alt="Health Care Cafe 4"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={hcc5}
               alt="Health Care Cafe 5"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
         </div>
@@ -251,7 +381,7 @@ const Home = () => {
       <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <h3 className={styles.sectionHeader}>
-          The Crimson Stitchery
+            The Crimson Stitchery
           </h3>
           <button className={styles.webSiteURL}>
             <Link
@@ -269,15 +399,21 @@ const Home = () => {
             </p>
           </div>
         </div>
-        
-        <div className={styles.sectionBody}>
+
+        <div 
+          id="TCS" 
+          className={`${TCS ? 
+            [styles.sectionBody, styles.active].join(" ") 
+            : styles.sectionBody
+          }`}
+        >
           <div className={styles.imageWrapper}>
             <Image
               src={tcs1}
               alt="The Crimson Stitchery 1"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -285,17 +421,17 @@ const Home = () => {
               src={tcs2}
               alt="The Crimson Stitchery 2"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={tcs3}
               alt="The Crimson Stitchery 3"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -303,17 +439,17 @@ const Home = () => {
               src={tcs4}
               alt="The Crimson Stitchery 4"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
-            <div className={styles.imageWrapper}>
+          <div className={styles.imageWrapper}>
             <Image
               src={tcs5}
               alt="The Crimson Stitchery 5"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           {/* <div className={styles.imageWrapper}>
@@ -330,8 +466,8 @@ const Home = () => {
               src={tcs7}
               alt="The Crimson Stitchery 7"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -339,8 +475,8 @@ const Home = () => {
               src={tcs8}
               alt="The Crimson Stitchery 8"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           <div className={styles.imageWrapper}>
@@ -348,8 +484,8 @@ const Home = () => {
               src={tcs9}
               alt="The Crimson Stitchery 9"
               layout="responsive"
-              // width={700}
-              // height={475}
+            // width={700}
+            // height={475}
             />
           </div>
           {/* <div className={styles.imageWrapper}>
@@ -362,9 +498,9 @@ const Home = () => {
             />
           </div> */}
         </div>
-      </div>    
+      </div>
 
-        {/* END */}      
+      {/* END */}
     </main>
   )
 }

@@ -73,8 +73,8 @@ div.sectionHeader {
   justify-content: center;
   align-items: center;
 
-  border-top: 2px solid $Primary;
-  border-bottom: 2px solid $Primary;
+  border-top: 1px solid $Primary;
+  border-bottom: 1px solid $Primary;
 
   box-shadow: 0px 1px 20px 0px $Box-Shadow;
 }
@@ -127,9 +127,10 @@ button.webSiteURL {
   padding: 0 3rem;
 }
 
+// * SCREENSHOTS
 div.sectionBody {
-  animation-name: fade-in;
-  animation-duration: 2s;
+  // animation-name: fade-in;
+  // animation-duration: 2s;
 
   padding: 2rem 2rem 2rem 2rem;
   margin: 0;
@@ -142,10 +143,23 @@ div.sectionBody {
   align-items: center;
   gap: 2rem;
 
+  opacity: 0;
+  transition: 1s all ease;
+
   @include min($min: $-sm) {
     gap: 5rem;
     padding: 5rem;
   }
+}
+
+div.sectionBody.active {
+  // opacity: 1;
+  // transition: 1s all ease;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+
+
 }
 
 .section .imageWrapper {
