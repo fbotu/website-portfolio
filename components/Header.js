@@ -10,11 +10,13 @@ import { MenuItems } from './MenuItems'
 import Logo from '../public/logo.webp'
 import { FaBars } from "react-icons/fa"
 import { FaTimes } from "react-icons/fa"
+import { FaGithub } from 'react-icons/fa'
 
-function Header() {
-  const [clicked, setClicked] = useState(false)
 
-  const handleClick = () => setClicked(!clicked);
+const Header = () => {
+  // const [clicked, setClicked] = useState(false)
+
+  // const handleClick = () => setClicked(!clicked);
 
   return (
       <div className={styles.navBar}>
@@ -25,7 +27,8 @@ function Header() {
             passHref
           >            
             <div className={styles.logoWrapper}
-                  onClick={handleClick}>
+                  // onClick={handleClick}
+                  >
                 {/* <Image
                   src={Logo}
                   alt="Logo"
@@ -33,11 +36,26 @@ function Header() {
                   width={2559/10}
                   height={853/10}
                   /> */}
-                  <h1>frAncis botu</h1>
-                  <h1>Web deVelopMent</h1>
-
+                  <h1>frAncis botu<br/>Web deVelopMent</h1>
             </div>
-          </Link>
+        </Link>
+        <div className={styles.intro}>
+            <h4 className={styles.bio}>
+              Sound Designer enjoying learning coding and finding ways to merge it with music.
+            <br />
+            <br />
+              Currently using: HTML, CSS, Javascript, React, NextJS, & Vercel.
+            <br />
+            <br />
+              <a href="https://github.com/fbotu">GitHub profile</a>
+            </h4>
+          <div className={styles.iconGroup}>
+            <a className={styles.socialIcon} href="https://github.com/fbotu">
+              <FaGithub />
+            </a>
+          </div>
+        </div>
+        
         {/* <div onClick={handleClick} className={styles.mobileMenuIcon}>
             <i>
               {clicked ? <FaTimes /> : <FaBars />}

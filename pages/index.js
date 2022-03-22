@@ -6,6 +6,8 @@ import Link from 'next/link';
 // * STYLES
 import styles from './index.module.scss'
 // * CONTENT
+// import { VscGithub } from 'react-icons/vsc';
+
 
   // *FB Music
   import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
@@ -72,9 +74,11 @@ const Home = () => {
           <h4 className={styles.webSiteType}>
             Portfolio / Personal
           </h4>
-          <p>
-            Portfolio website for a London based musician
-          </p>
+          <div className={styles.webSiteDescription}>
+            <p>
+              Portfolio website for a London based musician
+            </p>
+          </div>
         </div>
         
         <div className={styles.sectionBody}>
@@ -133,9 +137,11 @@ const Home = () => {
           <h4 className={styles.webSiteType}>
             Personal
           </h4>
-          <p>
-            Personal website for a London based academic
-          </p>
+          <div className={styles.webSiteDescription}>
+            <p>
+              Personal website for a London based academic
+            </p>
+          </div>
         </div>
         
         <div className={styles.sectionBody}>
@@ -185,9 +191,11 @@ const Home = () => {
           <h4 className={styles.webSiteType}>
             Small Business / Blog
           </h4>
-          <p>
-            Blog website for a small business in the healthcare sector
-          </p>
+          <div className={styles.webSiteDescription}>
+            <p>
+              Blog website for a small business in the healthcare sector
+            </p>
+          </div>
         </div>
         
         <div className={styles.sectionBody}>
@@ -255,9 +263,11 @@ const Home = () => {
           <h4 className={styles.webSiteType}>
             Blog / Portfolio / Small Business
           </h4>
-          <p className={styles.webSiteDescription}>
-            A website for a knitting YouTube channel and content creator
-          </p>
+          <div className={styles.webSiteDescription}>
+            <p>
+              A website for a knitting YouTube channel and content creator
+            </p>
+          </div>
         </div>
         
         <div className={styles.sectionBody}>

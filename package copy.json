@@ -1,5 +1,6 @@
 {
   "name": "website-portfolio",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "yarn dev": "yarn dev",
@@ -14,11 +15,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "sass": "^1.49.7",
-    "styled-components": "^5.3.3"
+    "sass": "^1.49.9"
   },
   "devDependencies": {
     "eslint": "8.8.0",
-    "eslint-config-next": "^11.0.0"
+    "eslint-config-next": "12.0.10"
   }
 }

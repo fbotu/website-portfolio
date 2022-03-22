@@ -27,18 +27,19 @@
 
 .navBar {
     overflow: hidden;
-    height: 175px;
+    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; 
     padding: 1.5rem; 
     background-color: $SecondaryLight;
 
-    a { 
-        font-size: 1.2rem;
-        font-weight: bold;
-        cursor: pointer;
-    }
+    // a { 
+    //     font-size: 1.2rem;
+    //     font-weight: bold;
+    //     cursor: pointer;
+    // }
 
     @include min($min:$-sm) {
         padding: 0 3vw; 
@@ -48,99 +49,138 @@
     }
 }
 
-.navMenu {
-    display: none; 
+// .navMenu {
+//     display: none; 
 
-    @include min($min:$-sm) {
-        display: flex;
-        justify-content: flex-end;
-        justify-items: flex-end;
-        list-style: none;
-        width: 80vw;
-        gap: 2vw;
-        margin-right: 0.5rem;
-    }
-    @include min($min:$-xl) {
-        gap: 4rem;
-        margin-right: 6rem;
-    }
+//     @include min($min:$-sm) {
+//         display: flex;
+//         justify-content: flex-end;
+//         justify-items: flex-end;
+//         list-style: none;
+//         width: 80vw;
+//         gap: 2vw;
+//         margin-right: 0.5rem;
+//     }
+//     @include min($min:$-xl) {
+//         gap: 4rem;
+//         margin-right: 6rem;
+//     }
 
-    & h2 {
-        @include xs-screen {
-            font-size: 16px;
-        }
-        @include sm-screen {
-            font-size: 16px;
-        }
-        @include md-screen {
-            font-size: 26px;
-        }
-        @include lg-screen {
-            font-size: 32px;
-        }
-        @include xl-screen {
-            font-size: 36px;
-        }
-    }
+//     & h2 {
+//         @include xs-screen {
+//             font-size: 16px;
+//         }
+//         @include sm-screen {
+//             font-size: 16px;
+//         }
+//         @include md-screen {
+//             font-size: 26px;
+//         }
+//         @include lg-screen {
+//             font-size: 32px;
+//         }
+//         @include xl-screen {
+//             font-size: 36px;
+//         }
+//     }
+// }
 
-}
+// li.navMenuItem {
+//     cursor: pointer;
+// }
 
-li.navMenuItem {
-    cursor: pointer;
-}
+// h2.menuItem {
+//     color: white;
+//     font-weight: normal;
+// }
 
-h2.menuItem {
-    color: white;
-    font-weight: normal;
-}
+// // * MOBILE MENU STYLES
+// ul.navMenuMobile {
+//     z-index: 1000;
+//     display: flex;
+//     flex-direction: column;
+//     list-style: none;
+//     text-align: center;
+//     width: 100%;
+//     height: auto;
+//     position: absolute;
+//     top: 120px;
+//     left: -0%;
+//     opacity: 1;
+//     transition: all 0.5s ease-out;
+//     background-color: $Primary;
+//     color: white;
+//     padding: 2rem 0;
 
-// * MOBILE MENU STYLES
-ul.navMenuMobile {
-    z-index: 1000;
+//     @include min($min:$-sm) {
+//     display: none;
+//     }
+// }
+
+// .navMenuItemMobile {
+//     padding: 0.5rem 0;
+// }
+
+// .mobileMenuIcon {
+//     width: 15vw;
+//     & i {
+//         color: white;
+//         font-size: 4rem;
+
+//         cursor: pointer;    
+        
+//         @include min($min:$-sm) {
+//             display: none;
+//         }
+//     }   
+// }
+
+// .mobileMenuLink {
+//     cursor: pointer;
+// }
+
+// h2.mobileMenuItem {
+//     color: white;
+//     font-weight: normal;
+// }
+.intro {
     display: flex;
     flex-direction: column;
-    list-style: none;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 120px;
-    left: -0%;
-    opacity: 1;
-    transition: all 0.5s ease-out;
-    background-color: $Primary;
-    color: white;
-    padding: 2rem 0;
+    align-items: center;
 
-    @include min($min:$-sm) {
-    display: none;
+    & a {
+        text-decoration: underline;
+        &:hover {
+            color: $Primary;
+        }
     }
 }
 
-.navMenuItemMobile {
-    padding: 0.5rem 0;
+h4.bio {
+    padding: 2rem 3rem 0rem 3rem;
+    width: 35rem;
+    text-align: center;    
 }
 
-.mobileMenuIcon {
-    width: 15vw;
-    & i {
-        color: white;
-        font-size: 4rem;
+// * ICONS
 
-        cursor: pointer;    
-        
-        @include min($min:$-sm) {
-            display: none;
-        }
-    }   
+.iconGroup {
+    padding-top: 0.5rem;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+
+    overflow: hidden;
+
+    @include min($min:$-sm) {
+        margin-bottom: 2rem;
+    }
+}
+.socialIcon {
+    padding: 0.5rem;
+    font-size: 3rem;
+    color: $PrimaryLight;
 }
 
-.mobileMenuLink {
-    cursor: pointer;
-}
-
-h2.mobileMenuItem {
-    color: white;
-    font-weight: normal;
-}
 
