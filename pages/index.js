@@ -1,19 +1,9 @@
 // * COMPONENTS
 import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-// import Socials from '../components/Socials'
-import { useState, useEffect } from 'react'
-import { motion } from "framer-motion"
-import Button from '../components/Button';
 import Website from '../components/Website'
-
 // * STYLES
 import styles from './index.module.scss'
 // * CONTENT
-// import { VscGithub } from 'react-icons/vsc';
-
-
 // *FB Music
 import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
 import fbm2 from '../public/websites/fb-music/image-6fb-music.webp'
@@ -44,139 +34,8 @@ import tcs8 from '../public/websites/tcs/image-9tcs.webp'
 import tcs9 from '../public/websites/tcs/image-10tcs.webp'
 import tcs10 from '../public/websites/tcs/image-11tcs.webp'
 
-// const FrancisBotuCOM = new Website(); 
-
 // * MAIN CODE BLOCK
 const Home = () => {
-
-  const Listener = (action) => {
-  useEffect(() => {
-        window.addEventListener('scroll', action)
-
-    return () => removeEventListener('scroll', action)
-    }, [action]);
-  }
-    const IfSt = (condition, action) => {
-        condition ? action(true) : action(false);
-    }  
-
-    class WebsiteTest {
-     constructor (name, tags, description, list) {
-      this.name = name;
-      this.tags = tags;
-      this.description = description;
-    
-      this.list = list
-      list = [];
-      // this.list = new Array();
-     }
-    }
-
-    const Test = new WebsiteTest(
-      "test", "Test / Testing", "This is a test", ["link1", "link2", "link3"]
-    );
-
-  // * USE STATES
-  const [FBM, setFBM] = useState(true);
-  const [AT, setAT] = useState(false);
-  const [HCC, setHCC] = useState(false);
-  const [TCS, setTCS] = useState(false);
-
-  // * REVEAL FUNCTIONS
-  // function revealFBM() {
-  //   let element = document.querySelector("#FBM");
-  //   // console.log(element)
-    
-  //   // for (let i = 0; i < element.length; i++) {
-  //     let windowHeight = window.innerHeight;
-  //     let elementTop = element.getBoundingClientRect().top;
-  //     let elementVisible = 150;
-  //     let position = windowHeight - elementVisible;
-  //     // console.log(windowHeight);
-  //     // console.log("element top " + elementTop);
-  //     // console.log(elementVisible);
-  //     // console.log("position " + position)
-
-  //     // if (elementTop < windowHeight - elementVisible) {
-  //     //   element[i].classList.add("active");
-  //     // } else {
-  //     //   element[i].classList.remove("active");
-  //     // }
-  //   // }
-  //   function isActive() {
-  //   (elementTop < position) ? setFBM(true) : setFBM(false);
-  //   // console.log(FBM);
-  //   }  
-  //   isActive()  
-  // }
-  // Listener(revealFBM);
-
-  function revealAT() {
-    let element = document.querySelector("#AT");
-    // console.log(element)
-    
-    let windowHeight = window.innerHeight;
-    let elementTop = element.getBoundingClientRect().top;
-    let elementVisible = 150;
-    let position = windowHeight - elementVisible;
-    // console.log(windowHeight);
-    // console.log("element top " + elementTop);
-    // console.log(elementVisible);
-    // console.log("position " + position)
-
-    function isActive() {
-    (elementTop < position) ? setAT(true) : setAT(false);
-    // console.log(AT);
-    }  
-    isActive()    
-  }
-  Listener(revealAT);
-
-  function revealHCC() {
-    let element = document.querySelector("#HCC");
-    // console.log(element)
-    
-    let windowHeight = window.innerHeight;
-    let elementTop = element.getBoundingClientRect().top;
-    let elementVisible = 150;
-    let position = windowHeight - elementVisible;
-    // console.log(windowHeight);
-    // console.log("element top " + elementTop);
-    // console.log(elementVisible);
-    // console.log("position " + position)
-
-    function isActive() {
-    (elementTop < position) ? setHCC(true) : setHCC(false);
-    // console.log(HCC);
-    }  
-    isActive()    
-  }
-  Listener(revealHCC);
-
-  function revealTCS() {
-    let element = document.querySelector("#TCS");
-    // console.log(element)
-    
-    let windowHeight = window.innerHeight;
-    let elementTop = element.getBoundingClientRect().top;
-    let elementVisible = 150;
-    let position = windowHeight - elementVisible;
-    // console.log(windowHeight);
-    // console.log("element top " + elementTop);
-    // console.log(elementVisible);
-    // console.log("position " + position)
-
-    function isActive() {
-    (elementTop < position) ? setTCS(true) : setTCS(false);
-    // console.log(TCS);
-    }  
-    isActive()    
-  }
-  Listener(revealTCS);
-
-  const [isOpen, setIsOpen] = useState(false)
-
-  
   return (
     <main className={styles.container}>
       <Head>
@@ -190,346 +49,56 @@ const Home = () => {
           href='https://webdevby.francisbotu.com'
         />
       </Head>
-{/* ----------------------------------------------------------------     */}
-      <Website 
+
+      {/* ----------------------------------------------------------------     */}
+
+      {/* Francis Botu .com */}
+      <Website
         baseState={true}
         id="FBM"
         name="FB Music"
         label="francisbotu.com"
-        link="https://www.francisbotu.com"
         style={styles.webSiteURL}
         type="Portfolio / Personal"
         description="Portfolio website for a London based musician"
         images={[fbm1, fbm2, fbm3, fbm4]}
       />
 
-      {/* FB Music */}
-      {/* <div className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h3 className={styles.sectionHeader}>
-            FB Music
-          </h3>
-          <Button
-            label="francisbotu.com"
-            link="https://francisbotu.com"
-            style={styles.webSiteURL}
-          />
-          <h4 className={styles.webSiteType}>
-            Portfolio / Personal
-          </h4>
-          <div className={styles.webSiteDescription}>
-            <p>
-              Portfolio website for a London based musician
-            </p>
-          </div>
-        </div>
-
-        <div 
-          id="FBM" 
-          className={`${FBM ? 
-            [styles.sectionBody, styles.active].join(" ") 
-            : styles.sectionBody
-          }`}
-        >
-          <div className={styles.imageWrapper}>
-            <Image
-              src={fbm1}
-              alt="FB Music 1"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={fbm2}
-              alt="FB Music 2"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={fbm3}
-              alt="FB Music 3"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={fbm4}
-              alt="FB Music 4"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-        </div>
-      </div> */}
-
       {/* Anushka Tay .co.uk */}
-      <div className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h3 className={styles.sectionHeader}>
-            Anushka Tay
-          </h3>
-          <button className={styles.webSiteURL}>
-            <Link
-              href="https://anushkatay.co.uk"
-            >
-              anushkatay.co.uk
-            </Link>
-          </button>
-          <h4 className={styles.webSiteType}>
-            Personal
-          </h4>
-          <div className={styles.webSiteDescription}>
-            <p>
-              Personal website for a London based academic
-            </p>
-          </div>
-        </div>
-
-        <div 
-          id="AT" 
-          className={`${AT ? 
-            [styles.sectionBody, styles.active].join(" ") 
-            : styles.sectionBody
-          }`}
-        >          
-          <div className={styles.imageWrapper}>
-            <Image
-              src={at1}
-              alt="Anushka Tay 1"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={at2}
-              alt="Anushka Tay 2"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={at3}
-              alt="Anushka Tay 3"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-        </div>
-      </div>
+      <Website
+        baseState={false}
+        id="AT"
+        name="Anushka Tay"
+        label="anushkatay.com"
+        style={styles.webSiteURL}
+        type="Personal"
+        description="Personal website for a London based academic"
+        images={[at1, at2, at3]}
+      />
 
       {/* Health Care Cafe .org.uk */}
-      <div className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h3 className={styles.sectionHeader}>
-            Health Care Cafe
-          </h3>
-          <button className={styles.webSiteURL}>
-            <Link
-              href="https://healthcarecafe.org.uk"
-            >
-              healthcarecafe.org.uk
-            </Link>
-          </button>
-          <h4 className={styles.webSiteType}>
-            Small Business / Blog
-          </h4>
-          <div className={styles.webSiteDescription}>
-            <p>
-              Blog website for a small business in the healthcare sector
-            </p>
-          </div>
-        </div>
-
-        <div 
-          id="HCC" 
-          className={`${HCC ? 
-            [styles.sectionBody, styles.active].join(" ") 
-            : styles.sectionBody
-          }`}
-        >
-          <div className={styles.imageWrapper}>
-            <Image
-              src={hcc1}
-              alt="Health Care Cafe 1"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={hcc2}
-              alt="Health Care Cafe 2"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={hcc3}
-              alt="Health Care Cafe 3"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={hcc4}
-              alt="Health Care Cafe 4"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={hcc5}
-              alt="Health Care Cafe 5"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-        </div>
-      </div>
+      <Website
+        baseState={false}
+        id="HCC"
+        name="Health Care Cafe"
+        label="healthcarecafe.org.uk"
+        style={styles.webSiteURL}
+        type="Small Business / Blog"
+        description="Blog website for a small business in the healthcare sector"
+        images={[hcc1, hcc2, hcc3, hcc4, hcc5]}
+      />
 
       {/* The Crimson Stitchery .com */}
-      <div className={styles.section}>
-        <div className={styles.sectionHeader}>
-          <h3 className={styles.sectionHeader}>
-            The Crimson Stitchery
-          </h3>
-          <button className={styles.webSiteURL}>
-            <Link
-              href="https://thecrimsonstitchery.com"
-            >
-              thecrimsonstitchery.com
-            </Link>
-          </button>
-          <h4 className={styles.webSiteType}>
-            Blog / Portfolio / Small Business
-          </h4>
-          <div className={styles.webSiteDescription}>
-            <p>
-              A website for a knitting YouTube channel and content creator
-            </p>
-          </div>
-        </div>
-
-        <div 
-          id="TCS" 
-          className={`${TCS ? 
-            [styles.sectionBody, styles.active].join(" ") 
-            : styles.sectionBody
-          }`}
-        >
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs1}
-              alt="The Crimson Stitchery 1"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs2}
-              alt="The Crimson Stitchery 2"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs3}
-              alt="The Crimson Stitchery 3"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs4}
-              alt="The Crimson Stitchery 4"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs5}
-              alt="The Crimson Stitchery 5"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          {/* <div className={styles.imageWrapper}>
-            <Image
-              src={tcs6}
-              alt="The Crimson Stitchery 6"
-              layout="responsive"
-              // width={700}
-              // height={475}
-            />
-          </div> */}
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs7}
-              alt="The Crimson Stitchery 7"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs8}
-              alt="The Crimson Stitchery 8"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={tcs9}
-              alt="The Crimson Stitchery 9"
-              layout="responsive"
-            // width={700}
-            // height={475}
-            />
-          </div>
-          {/* <div className={styles.imageWrapper}>
-            <Image
-              src={tcs10}
-              alt="The Crimson Stitchery 10"
-              layout="responsive"
-              // width={700}
-              // height={475}
-            />
-          </div> */}
-        </div>
-      </div>
+      <Website
+        baseState={false}
+        id="HTCS"
+        name="The Crimson Stitchery"
+        label="thecrimsonstitchery.com"
+        style={styles.webSiteURL}
+        type="Blog / Portfolio / Small Business"
+        description="A website for a knitting YouTube channel and content creator"
+        images={[tcs1, tcs2, tcs3, tcs4, tcs5, tcs6, tcs7, tcs8, tcs9, tcs10]}
+      />
 
       {/* END */}
     </main>
