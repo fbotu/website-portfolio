@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 // * STYLES
 import styles from './header.module.scss'
 // * COMPONENTS

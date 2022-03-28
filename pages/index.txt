@@ -83,33 +83,33 @@ const Home = () => {
   const [TCS, setTCS] = useState(false);
 
   // * REVEAL FUNCTIONS
-  // function revealFBM() {
-  //   let element = document.querySelector("#FBM");
-  //   // console.log(element)
+  function revealFBM() {
+    let element = document.querySelector("#FBM");
+    // console.log(element)
     
-  //   // for (let i = 0; i < element.length; i++) {
-  //     let windowHeight = window.innerHeight;
-  //     let elementTop = element.getBoundingClientRect().top;
-  //     let elementVisible = 150;
-  //     let position = windowHeight - elementVisible;
-  //     // console.log(windowHeight);
-  //     // console.log("element top " + elementTop);
-  //     // console.log(elementVisible);
-  //     // console.log("position " + position)
+    // for (let i = 0; i < element.length; i++) {
+      let windowHeight = window.innerHeight;
+      let elementTop = element.getBoundingClientRect().top;
+      let elementVisible = 150;
+      let position = windowHeight - elementVisible;
+      // console.log(windowHeight);
+      // console.log("element top " + elementTop);
+      // console.log(elementVisible);
+      // console.log("position " + position)
 
-  //     // if (elementTop < windowHeight - elementVisible) {
-  //     //   element[i].classList.add("active");
-  //     // } else {
-  //     //   element[i].classList.remove("active");
-  //     // }
-  //   // }
-  //   function isActive() {
-  //   (elementTop < position) ? setFBM(true) : setFBM(false);
-  //   // console.log(FBM);
-  //   }  
-  //   isActive()  
-  // }
-  // Listener(revealFBM);
+      // if (elementTop < windowHeight - elementVisible) {
+      //   element[i].classList.add("active");
+      // } else {
+      //   element[i].classList.remove("active");
+      // }
+    // }
+    function isActive() {
+    (elementTop < position) ? setFBM(true) : setFBM(false);
+    // console.log(FBM);
+    }  
+    isActive()  
+  }
+  Listener(revealFBM);
 
   function revealAT() {
     let element = document.querySelector("#AT");
@@ -192,23 +192,29 @@ const Home = () => {
       </Head>
 {/* ----------------------------------------------------------------     */}
       <Website 
-        baseState={true}
-        id="FBM"
+        baseState={false}
+        id="test"
         name="FB Music"
         label="francisbotu.com"
         link="https://www.francisbotu.com"
         style={styles.webSiteURL}
-        type="Portfolio / Personal"
-        description="Portfolio website for a London based musician"
-        images={[fbm1, fbm2, fbm3, fbm4]}
+        type="Test"
+        description="This is a test"
       />
 
       {/* FB Music */}
-      {/* <div className={styles.section}>
+      <div className={styles.section}>
         <div className={styles.sectionHeader}>
           <h3 className={styles.sectionHeader}>
             FB Music
           </h3>
+          {/* <button className={styles.webSiteURL}>
+            <Link
+              href="https://francisbotu.com"
+            >
+              francisbotu.com
+            </Link>
+          </button> */}
           <Button
             label="francisbotu.com"
             link="https://francisbotu.com"
@@ -268,7 +274,7 @@ const Home = () => {
             />
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Anushka Tay .co.uk */}
       <div className={styles.section}>

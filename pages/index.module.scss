@@ -175,7 +175,30 @@ div.sectionBody.active {
     transition: 0.3s ease-in-out;
   }
 
+  
+
   // @include min($min: $-sm) {
   //   padding: 1rem;
   // }
+}
+
+ul.WebsiteList {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+  @include min($min: $-sm) {
+    gap: 5rem;
+  }
+}
+
+li.WebsiteListItem {
+  width: 100%;
+  height: auto;
+
+  display: block;
+  // position: relative;
 }
