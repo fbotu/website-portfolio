@@ -1,20 +1,18 @@
-// // * COMPONENTS
-// // * STYLES
+// * COMPONENTS
+// * STYLES
 
-// // * CONTENT
-// // *FB Music
-// import fbm1 from '../../public/websites/fb-music/image-wrapperfb-music.webp'
-// import fbm2 from '../../public/websites/fb-music/image-6fb-music.webp'
-// import fbm3 from '../../public/websites/fb-music/image-7fb-music.webp'
-// import fbm4 from '../../public/websites/fb-music/image-10fb-music.webp'
+// * CONTENT
+// * Health Care Cafe
+import hcc1 from '../../public/websites/hcc/image-1hcc.webp'
+import hcc2 from '../../public/websites/hcc/image-2hcc.webp'
+import hcc3 from '../../public/websites/hcc/image-3hcc.webp'
+import hcc4 from '../../public/websites/hcc/image-4hcc.webp'
+import hcc5 from '../../public/websites/hcc/image-5hcc.webp'
 
-// let FBMset = new Set();
+let HCCset = new Set();
 
-// FBMset.add(fbm1);
-// FBMset.add(fbm2);
-// FBMset.add(fbm3);
-// FBMset.add(fbm4);
+HCCset.add(hcc1).add(hcc2).add(hcc3).add(hcc4).add(hcc5);
 
-// let FBM = Array.from(FBMset);
+let HCC = Array.from(HCCset);
 
-// export default FBM;
+export default HCC;

@@ -1,20 +1,24 @@
-// // * COMPONENTS
-// // * STYLES
+// * COMPONENTS
+// * STYLES
 
-// // * CONTENT
-// // *FB Music
-// import fbm1 from '../../public/websites/fb-music/image-wrapperfb-music.webp'
-// import fbm2 from '../../public/websites/fb-music/image-6fb-music.webp'
-// import fbm3 from '../../public/websites/fb-music/image-7fb-music.webp'
-// import fbm4 from '../../public/websites/fb-music/image-10fb-music.webp'
+// * CONTENT
+// * The Crimson Stitchery
+import tcs1 from '../../public/websites/tcs/image-1tcs.webp'
+import tcs2 from '../../public/websites/tcs/image-2tcs.webp'
+import tcs3 from '../../public/websites/tcs/image-3tcs.webp'
+import tcs4 from '../../public/websites/tcs/image-4tcs.webp'
+import tcs5 from '../../public/websites/tcs/image-5tcs.webp'
+// import tcs6 from '../../public/websites/tcs/image-6tcs.webp'
+import tcs7 from '../../public/websites/tcs/image-7tcs.webp'
+import tcs8 from '../../public/websites/tcs/image-9tcs.webp'
+import tcs9 from '../../public/websites/tcs/image-10tcs.webp'
+// import tcs10 from '../../public/websites/tcs/image-11tcs.webp'
 
-// let FBMset = new Set();
+let TCSset = new Set();
 
-// FBMset.add(fbm1);
-// FBMset.add(fbm2);
-// FBMset.add(fbm3);
-// FBMset.add(fbm4);
+TCSset.add(tcs1).add(tcs2).add(tcs3).add(tcs4).add(tcs5).add(tcs7).add(tcs8).add(tcs9);
+// .add(tcs6)
+// .add(tcs10)
+let TCS = Array.from(TCSset);
 
-// let FBM = Array.from(FBMset);
-
-// export default FBM;
+export default TCS;

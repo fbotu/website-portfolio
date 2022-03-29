@@ -10,7 +10,7 @@ const Listener = (action) => {
   useEffect(() => {
     window.addEventListener('scroll', action)
     return () => removeEventListener('scroll', action)
-  }, []);
+  }, );
 }
 // *MAIN CODE BLOCK
 const Website = (props) => {
@@ -45,6 +45,7 @@ const Website = (props) => {
     // console.log(elementVisible);
     // console.log("position " + position);
     // console.log(images)
+    // 
 
     function isActive() {
       (elementTop < position) ? setReveal(true) 
@@ -90,12 +91,12 @@ const Website = (props) => {
                 <div className={styles.imageWrapper}>
                   <Image
                     src={item.src}
-                    alt="test"
+                    alt={`A screen from the ${name} website. Made by Francis Botu`}
                     layout="responsive"
                     width={item.width/2}
                     height={item.height/2}
-                    loading="lazy"
-                    quality="60"
+                    // loading="lazy"
+                    // quality="60"
                   />
                 </div>
                 {/* {console.log(`${item.src} is ${item.width/2}px * ${item.height/2}px`)} */}
