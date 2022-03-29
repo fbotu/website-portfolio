@@ -10,7 +10,7 @@ const Listener = (action) => {
   useEffect(() => {
     window.addEventListener('scroll', action)
     return () => removeEventListener('scroll', action)
-  }, [action]);
+  }, []);
 }
 // *MAIN CODE BLOCK
 const Website = (props) => {
@@ -47,7 +47,9 @@ const Website = (props) => {
     // console.log(images)
 
     function isActive() {
-      (elementTop < position) ? setReveal(true) : setReveal(false);
+      (elementTop < position) ? setReveal(true) 
+      // : setReveal(false);
+      : '';
       // console.log(reveal);
     }
     isActive()
@@ -90,11 +92,13 @@ const Website = (props) => {
                     src={item.src}
                     alt="test"
                     layout="responsive"
-                    width={item.width}
-                    height={item.height}
+                    width={item.width/2}
+                    height={item.height/2}
+                    loading="lazy"
+                    quality="60"
                   />
                 </div>
-                {/* {console.log(item.src)} */}
+                {/* {console.log(`${item.src} is ${item.width/2}px * ${item.height/2}px`)} */}
               </li>
             );
           })}

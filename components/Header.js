@@ -3,13 +3,13 @@
 import styles from './header.module.scss'
 // * COMPONENTS
 import Link from 'next/link'
-import Image from 'next/image'
-import { useState } from 'react'
-import { MenuItems } from './MenuItems'
+// import Image from 'next/image'
+// import { useState } from 'react'
+// import { MenuItems } from './MenuItems'
 // * CONTENT
-import Logo from '../public/logo.webp'
-import { FaBars } from "react-icons/fa"
-import { FaTimes } from "react-icons/fa"
+// import Logo from '../public/logo.webp'
+// import { FaBars } from "react-icons/fa"
+// import { FaTimes } from "react-icons/fa"
 import { FaGithub } from 'react-icons/fa'
 
 

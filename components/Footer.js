@@ -1,8 +1,8 @@
 // * COMPONENTS
 import React from 'react';
-import Link from 'next/link'
-import Image from 'next/image';
-import Logo from '../public/logo.webp';
+// import Link from 'next/link'
+// import Image from 'next/image';
+// import Logo from '../public/logo.webp';
 // * STYLES
 import styles from './footer.module.scss'
 

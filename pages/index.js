@@ -4,16 +4,22 @@ import Website from '../components/Website'
 // * STYLES
 import styles from './index.module.scss'
 // * CONTENT
-// *FB Music
-import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
-import fbm2 from '../public/websites/fb-music/image-6fb-music.webp'
-import fbm3 from '../public/websites/fb-music/image-7fb-music.webp'
-import fbm4 from '../public/websites/fb-music/image-10fb-music.webp'
+import fbmArray from '../components/sets/FBM'
+import atArray from '../components/sets/AT'
+// import hcc from '../components/sets/HCC'
+// import tcs from '../components/sets/TCS'
 
-// * Anushka Tay
-import at1 from '../public/websites/anushka-tay/image-1anushka-tay.webp'
-import at2 from '../public/websites/anushka-tay/image-2anushka-tay.webp'
-import at3 from '../public/websites/anushka-tay/image-3anushka-tay.webp'
+
+// // *FB Music
+// import fbm1 from '../public/websites/fb-music/image-wrapperfb-music.webp'
+// import fbm2 from '../public/websites/fb-music/image-6fb-music.webp'
+// import fbm3 from '../public/websites/fb-music/image-7fb-music.webp'
+// import fbm4 from '../public/websites/fb-music/image-10fb-music.webp'
+
+// // * Anushka Tay
+// import at1 from '../public/websites/anushka-tay/image-1anushka-tay.webp'
+// import at2 from '../public/websites/anushka-tay/image-2anushka-tay.webp'
+// import at3 from '../public/websites/anushka-tay/image-3anushka-tay.webp'
 
 // * Health Care Cafe
 import hcc1 from '../public/websites/hcc/image-1hcc.webp'
@@ -61,8 +67,9 @@ const Home = () => {
         style={styles.webSiteURL}
         type="Portfolio / Personal"
         description="Portfolio website for a London based musician"
-        images={[fbm1, fbm2, fbm3, fbm4]}
+        images={fbmArray}
       />
+      {/* {console.log(fbmArray)} */}
 
       {/* Anushka Tay .co.uk */}
       <Website
@@ -73,7 +80,7 @@ const Home = () => {
         style={styles.webSiteURL}
         type="Personal"
         description="Personal website for a London based academic"
-        images={[at1, at2, at3]}
+        images={atArray}
       />
 
       {/* Health Care Cafe .org.uk */}

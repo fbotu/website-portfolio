@@ -1,5 +1,5 @@
 // * COMPONENTS
-import React from 'react'
+// import React from 'react'
 // * STYLES
 import styles from './Socials.module.scss'
 // * CONTENT
